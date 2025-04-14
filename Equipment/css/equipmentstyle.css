@@ -1,0 +1,96 @@
+/* AgriConnect Equipment Page Styles */
+
+:root {
+    --primary-color: #FF9933;
+    --secondary-color: #2a9d8f;
+    --accent-color: #e76f51;
+    --light-color: #e9c46a;
+    --dark-color: #264653;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #fefae0;
+}
+
+/* Equipment Cards */
+.equipment-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.equipment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.equipment-card img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.equipment-card:hover img {
+    transform: scale(1.05);
+}
+
+.equipment-card .card-body {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.equipment-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Equipment Details */
+.equipment-details {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.equipment-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.equipment-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.equipment-details li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.equipment-details li::before {
+    content: '✓';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .equipment-card img {
+        height: 200px;
+    }
+    
+    .equipment-details {
+        padding: 1.5rem;
+    }
+} 
