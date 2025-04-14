@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect Data System - Recommendations</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AgriConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resource.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="recommendation.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fertilizers.html">Fertilizers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="irrigation.html">Irrigation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipment.html">Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Farming Recommendations</h1>
+            <p class="lead">Data-driven insights to optimize your farming practices</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>Personalized Recommendations</h2>
+                <p>Our recommendation system analyzes soil conditions, weather patterns, and historical data to provide you with customized farming advice.</p>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Crop Recommendations</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Optimal Crop Selection</h5>
+                        <p class="card-text">Get recommendations on which crops will thrive in your specific soil and climate conditions.</p>
+                        <a href="#" class="btn btn-primary">View Crop Recommendations</a>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Seasonal Planning</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Planting Calendar</h5>
+                        <p class="card-text">Receive customized planting and harvesting schedules based on your location and selected crops.</p>
+                        <a href="#" class="btn btn-primary">Generate Calendar</a>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Yield Optimization</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Maximizing Productivity</h5>
+                        <p class="card-text">Learn strategies to increase your yield based on data analysis from similar farms in your region.</p>
+                        <a href="#" class="btn btn-primary">Get Yield Tips</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-header">Input Your Data</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Enter your location">
+                            </div>
+                            <div class="mb-3">
+                                <label for="soilType" class="form-label">Soil Type</label>
+                                <select class="form-select" id="soilType">
+                                    <option selected>Select soil type</option>
+                                    <option value="clay">Clay</option>
+                                    <option value="loamy">Loamy</option>
+                                    <option value="sandy">Sandy</option>
+                                    <option value="silt">Silt</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="farmSize" class="form-label">Farm Size (acres)</label>
+                                <input type="number" class="form-control" id="farmSize">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Get Recommendations</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Recent Updates</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">New crop data for monsoon season</li>
+                        <li class="list-group-item">Updated soil nutrient recommendations</li>
+                        <li class="list-group-item">Enhanced weather prediction models</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>AgriConnect Data System</h5>
+                    <p>Your partner in smart farming solutions</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2023 AgriConnect. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html> 
