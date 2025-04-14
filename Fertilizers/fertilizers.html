@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect Data System - Fertilizers</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AgriConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resource.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recommendation.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="fertilizers.html">Fertilizers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="irrigation.html">Irrigation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipment.html">Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Fertilizer Management</h1>
+            <p class="lead">Optimize soil nutrition for healthier crops and higher yields</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>Fertilizer Information</h2>
+                <p>Proper fertilization is essential for crop health and productivity. Our fertilizer management system helps you determine the right type, amount, and timing for optimal results.</p>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Fertilizer Types</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Understanding Fertilizer Options</h5>
+                        <p class="card-text">Learn about different types of fertilizers and their specific benefits for various crops and soil conditions.</p>
+                        
+                        <div class="table-responsive mt-3">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Fertilizer Type</th>
+                                        <th>Main Nutrients</th>
+                                        <th>Best For</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Nitrogen Fertilizers</td>
+                                        <td>N</td>
+                                        <td>Leafy growth, overall plant development</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phosphorus Fertilizers</td>
+                                        <td>P</td>
+                                        <td>Root development, flowering, fruiting</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Potassium Fertilizers</td>
+                                        <td>K</td>
+                                        <td>Overall plant health, disease resistance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Complete Fertilizers</td>
+                                        <td>N-P-K</td>
+                                        <td>Balanced nutrition for most crops</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Organic Fertilizers</td>
+                                        <td>Varies</td>
+                                        <td>Sustainable farming, soil health</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Application Guidelines</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Proper Application Techniques</h5>
+                        <p class="card-text">Discover the best methods for applying fertilizers to maximize efficiency and minimize environmental impact.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Always test your soil before applying fertilizers</li>
+                            <li class="list-group-item">Apply at the right time in the growing cycle</li>
+                            <li class="list-group-item">Follow recommended application rates</li>
+                            <li class="list-group-item">Consider slow-release options for consistent nutrition</li>
+                            <li class="list-group-item">Be mindful of environmental impacts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-header">Fertilizer Calculator</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="cropType" class="form-label">Crop Type</label>
+                                <select class="form-select" id="cropType">
+                                    <option selected>Select crop</option>
+                                    <option value="wheat">Wheat</option>
+                                    <option value="rice">Rice</option>
+                                    <option value="corn">Corn</option>
+                                    <option value="soybean">Soybean</option>
+                                    <option value="cotton">Cotton</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fieldSize" class="form-label">Field Size (acres)</label>
+                                <input type="number" class="form-control" id="fieldSize">
+                            </div>
+                            <div class="mb-3">
+                                <label for="soilCondition" class="form-label">Soil Condition</label>
+                                <select class="form-select" id="soilCondition">
+                                    <option selected>Select condition</option>
+                                    <option value="poor">Poor</option>
+                                    <option value="moderate">Moderate</option>
+                                    <option value="good">Good</option>
+                                    <option value="excellent">Excellent</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Calculate Needs</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Sustainable Practices</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Eco-Friendly Fertilization</h5>
+                        <p class="card-text">Explore sustainable fertilization practices that maintain soil health and protect the environment.</p>
+                        <a href="#" class="btn btn-outline-success">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>AgriConnect Data System</h5>
+                    <p>Your partner in smart farming solutions</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2023 AgriConnect. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html> 
