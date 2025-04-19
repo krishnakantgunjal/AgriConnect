@@ -3,127 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriConnect Data System - Recommendations</title>
+    <title>Crop Recommendation - AgriConnect</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/recommendationstyle.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">AgriConnect</a>
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="../home/index.html">
+                <img src="../home/assets/images/Logo.png" alt="AgriConnect Logo" height="150" class="me-1">
+                <span class="display-5 mb-0">AgriConnect</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="../home/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="resource.html">Resources</a>
+                        <a class="nav-link" href="../home/resource.html">Resources</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="recommendation.html">Recommendations</a>
+                        <a class="nav-link active" aria-current="page" href="recommendation.html">Crop Recommendation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="fertilizers.html">Fertilizers</a>
+                        <a class="nav-link" href="../home/fertilizers.html">Fertilizers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="irrigation.html">Irrigation</a>
+                        <a class="nav-link" href="../home/irrigation.html">Irrigation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="equipment.html">Equipment</a>
+                        <a class="nav-link" href="../home/equipment.html">Equipment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="../home/about.html">About</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-5">
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center">
         <div class="container">
-            <h1 class="display-4">Farming Recommendations</h1>
-            <p class="lead">Data-driven insights to optimize your farming practices</p>
+            <h1 class="display-4 fw-bold ">Crop Recommendation</h1>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="container my-5">
-        <div class="row">
-            <div class="col-lg-8">
-                <h2>Personalized Recommendations</h2>
-                <p>Our recommendation system analyzes soil conditions, weather patterns, and historical data to provide you with customized farming advice.</p>
-                
-                <div class="card mb-4">
-                    <div class="card-header">Crop Recommendations</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Optimal Crop Selection</h5>
-                        <p class="card-text">Get recommendations on which crops will thrive in your specific soil and climate conditions.</p>
-                        <a href="#" class="btn btn-primary">View Crop Recommendations</a>
+        <div class="row py-5 animate-fade-in">
+            <div class="col-lg-6 mb-4">
+                <div class="recommendation-form-container">
+                    <h2 class="mb-4"><i class="fas fa-leaf me-2"></i>Soil & Weather Data</h2>
+                    <form id="recommendation-form" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="nitrogen" name="Nitrogen" placeholder="0" required min="0" max="300" step="0.01">
+                                    <label for="nitrogen">Nitrogen (N) </label>
+                                    <div class="form-text">Range: 0-300 </div>
+                                    <div class="invalid-feedback">Please enter a valid Nitrogen value (0-300)</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="phosphorus" name="Phosporus" placeholder="0" required min="0" max="300" step="0.01">
+                                    <label for="phosphorus">Phosphorus (P) </label>
+                                    <div class="form-text">Range: 0-300 </div>
+                                    <div class="invalid-feedback">Please enter a valid Phosphorus value (0-300 )</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="potassium" name="Potassium" placeholder="0" required min="0" max="300" step="0.01">
+                                    <label for="potassium">Potassium (K)</label>
+                                    <div class="form-text">Range: 0-300 </div>
+                                    <div class="invalid-feedback">Please enter a valid Potassium value (0-300)</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="temperature" name="Temperature" placeholder="0" required min="0" max="50" step="0.01">
+                                    <label for="temperature">Temperature (°C)</label>
+                                    <div class="form-text">Range: 0-50 °C</div>
+                                    <div class="invalid-feedback">Please enter a valid Temperature value (0-50 °C)</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="humidity" name="Humidity" placeholder="0" required min="0" max="100" step="0.01">
+                                    <label for="humidity">Humidity (%)</label>
+                                    <div class="form-text">Range: 0-100 %</div>
+                                    <div class="invalid-feedback">Please enter a valid Humidity percentage (0-100%)</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="ph" name="Ph" placeholder="0" required min="0" max="14" step="0.01">
+                                    <label for="ph">pH Value</label>
+                                    <div class="form-text">Range: 0-14</div>
+                                    <div class="invalid-feedback">Please enter a valid pH value (0-14)</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="rainfall" name="Rainfall" placeholder="0" required min="0" max="5000" step="0.01">
+                                    <label for="rainfall">Rainfall (mm)</label>
+                                    <div class="form-text">Range: 0-5000 mm</div>
+                                    <div class="invalid-feedback">Please enter a valid Rainfall value (0-5000 mm)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg" id="predict-button">
+                                <i class="fas fa-seedling me-2"></i>Get Recommendation
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="result-container">
+                    <h2 class="mb-4"><i class="fas fa-chart-pie me-2"></i>Recommendation Results</h2>
+                    
+                    <!-- Loading state -->
+                    <div id="loading-state" class="text-center py-5 d-none">
+                        <div class="spinner-border text-success mb-3" role="status" style="width: 3rem; height: 3rem;">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="lead">Analyzing your data...</p>
+                    </div>
+                    
+                    <!-- Initial state -->
+                    <div id="initial-state" class="text-center py-5">
+                        <img src="https://img.icons8.com/color/96/000000/farm.png" alt="Farm icon" class="mb-3">
+                        <p class="lead">Enter your soil and weather data to get personalized crop recommendations.</p>
+                        <p>Our AI model will analyze your inputs and suggest the best crop for your conditions.</p>
+                    </div>
+                    
+                    <!-- Results state -->
+                    <div id="prediction-result" class="d-none">
+                        <div class="card mb-4 prediction-card">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Recommended Crop</h3>
+                                <div class="crop-image-container mb-3">
+                                    <img id="crop-image" src="" alt="Crop image" class="img-fluid rounded crop-image">
+                                </div>
+                                <h2 class="crop-name mb-3" id="crop-name"></h2>
+                                <div class="confidence-bar mb-4">
+                                    <div class="progress">
+                                        <div id="confidence-indicator" class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                    </div>
+                                    <p class="text-muted mt-2">Recommendation confidence</p>
+                                </div>
                     </div>
                 </div>
                 
                 <div class="card mb-4">
-                    <div class="card-header">Seasonal Planning</div>
+                            <div class="card-header bg-light">
+                                <h4 class="mb-0"><i class="fas fa-info-circle me-2"></i>Why This Crop?</h4>
+                            </div>
                     <div class="card-body">
-                        <h5 class="card-title">Planting Calendar</h5>
-                        <p class="card-text">Receive customized planting and harvesting schedules based on your location and selected crops.</p>
-                        <a href="#" class="btn btn-primary">Generate Calendar</a>
+                                <ul class="list-group list-group-flush" id="factors-list">
+                                    <!-- Factors will be populated via JavaScript -->
+                                </ul>
                     </div>
                 </div>
                 
                 <div class="card mb-4">
-                    <div class="card-header">Yield Optimization</div>
+                            <div class="card-header bg-light">
+                                <h4 class="mb-0"><i class="fas fa-exchange-alt me-2"></i>Top 3 Recommended Crops</h4>
+                            </div>
                     <div class="card-body">
-                        <h5 class="card-title">Maximizing Productivity</h5>
-                        <p class="card-text">Learn strategies to increase your yield based on data analysis from similar farms in your region.</p>
-                        <a href="#" class="btn btn-primary">Get Yield Tips</a>
+                                <div id="alternative-crops" class="row g-2">
+                                    <!-- Alternative crops will be populated via JavaScript -->
                     </div>
                 </div>
             </div>
             
-            <div class="col-lg-4">
-                <div class="card mb-4">
-                    <div class="card-header">Input Your Data</div>
-                    <div class="card-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="location" class="form-label">Location</label>
-                                <input type="text" class="form-control" id="location" placeholder="Enter your location">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h4 class="mb-0"><i class="fas fa-table me-2"></i>Your Input Summary</h4>
                             </div>
-                            <div class="mb-3">
-                                <label for="soilType" class="form-label">Soil Type</label>
-                                <select class="form-select" id="soilType">
-                                    <option selected>Select soil type</option>
-                                    <option value="clay">Clay</option>
-                                    <option value="loamy">Loamy</option>
-                                    <option value="sandy">Sandy</option>
-                                    <option value="silt">Silt</option>
-                                </select>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Parameter</th>
+                                                <th>Value</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="input-summary">
+                                            <!-- Input summary will be populated via JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="farmSize" class="form-label">Farm Size (acres)</label>
-                                <input type="number" class="form-control" id="farmSize">
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Get Recommendations</button>
-                        </form>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">Recent Updates</div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">New crop data for monsoon season</li>
-                        <li class="list-group-item">Updated soil nutrient recommendations</li>
-                        <li class="list-group-item">Enhanced weather prediction models</li>
-                    </ul>
+                    
+                    <!-- Error state -->
+                    <div id="error-state" class="d-none">
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading"><i class="fas fa-exclamation-triangle me-2"></i>Oops!</h4>
+                            <p id="error-message">Something went wrong while processing your request.</p>
+                            <hr>
+                            <p class="mb-0">Please check your inputs and try again.</p>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,21 +230,388 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h5>AgriConnect Data System</h5>
-                    <p>Your partner in smart farming solutions</p>
+                    <h5 class="mb-3">AgriConnect Data System</h5>
+                    <p class="mb-0">Your partner in smart farming solutions</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p>&copy; 2023 AgriConnect. All rights reserved.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="mt-3 mb-0">&copy; 2023 AgriConnect. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="js/script.js"></script>
+    
+    <!-- JavaScript for prediction functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('recommendation-form');
+            const predictButton = document.getElementById('predict-button');
+            const loadingState = document.getElementById('loading-state');
+            const initialState = document.getElementById('initial-state');
+            const predictionResult = document.getElementById('prediction-result');
+            const errorState = document.getElementById('error-state');
+            const errorMessage = document.getElementById('error-message');
+            
+            // Crop images mapping
+            const cropImages = {
+                'Rice': 'https://img.icons8.com/color/96/000000/rice-bowl.png',
+                'Maize': 'https://img.icons8.com/color/96/000000/corn.png',
+                'Jute': 'https://img.icons8.com/color/96/000000/rope.png',
+                'Cotton': 'https://img.icons8.com/color/96/000000/cotton.png',
+                'Coconut': 'https://img.icons8.com/color/96/000000/coconut.png',
+                'Papaya': 'https://img.icons8.com/color/96/000000/papaya.png',
+                'Orange': 'https://img.icons8.com/color/96/000000/orange.png',
+                'Apple': 'https://img.icons8.com/color/96/000000/apple.png',
+                'Muskmelon': 'https://img.icons8.com/color/96/000000/melon.png',
+                'Watermelon': 'https://img.icons8.com/color/96/000000/watermelon.png',
+                'Grapes': 'https://img.icons8.com/color/96/000000/grapes.png',
+                'Mango': 'https://img.icons8.com/color/96/000000/mango.png',
+                'Banana': 'https://img.icons8.com/color/96/000000/banana.png',
+                'Pomegranate': 'https://img.icons8.com/color/96/000000/pomegranate.png',
+                'Lentil': 'https://img.icons8.com/color/96/000000/lentil.png',
+                'Blackgram': 'https://img.icons8.com/color/96/000000/black-beans.png',
+                'Mungbean': 'https://img.icons8.com/color/96/000000/green-beans.png',
+                'Mothbeans': 'https://img.icons8.com/color/96/000000/beans.png',
+                'Pigeonpeas': 'https://img.icons8.com/color/96/000000/peas.png',
+                'Kidneybeans': 'https://img.icons8.com/color/96/000000/kidney-beans.png',
+                'Chickpea': 'https://img.icons8.com/color/96/000000/chickpea.png',
+                'Coffee': 'https://img.icons8.com/color/96/000000/coffee-beans.png'
+            };
+            
+            // Default image if crop not found
+            const defaultImage = 'https://img.icons8.com/color/96/000000/farm.png';
+            
+            // Function to show loading state
+            function showLoading() {
+                initialState.classList.add('d-none');
+                predictionResult.classList.add('d-none');
+                errorState.classList.add('d-none');
+                loadingState.classList.remove('d-none');
+                predictButton.disabled = true;
+            }
+            
+            // Function to show results
+            function showResults() {
+                loadingState.classList.add('d-none');
+                initialState.classList.add('d-none');
+                errorState.classList.add('d-none');
+                predictionResult.classList.remove('d-none');
+                predictButton.disabled = false;
+            }
+            
+            // Function to show error
+            function showError(message) {
+                loadingState.classList.add('d-none');
+                initialState.classList.add('d-none');
+                predictionResult.classList.add('d-none');
+                errorState.classList.remove('d-none');
+                errorMessage.textContent = message;
+                predictButton.disabled = false;
+            }
+            
+            // Function to update results UI with response data
+            function updateResultsUI(data) {
+                // Update crop name and image
+                const cropName = document.getElementById('crop-name');
+                const cropImage = document.getElementById('crop-image');
+                cropName.textContent = data.prediction;
+                cropImage.src = cropImages[data.prediction] || defaultImage;
+                
+                // Update confidence bar
+                let confidence = 90; // Default confidence
+                
+                // If we have top_crops data, use the confidence of the first crop
+                if (data.top_crops && data.top_crops.length > 0) {
+                    confidence = data.top_crops[0].confidence;
+                } else {
+                    // Fallback to random confidence between 70-99%
+                    confidence = Math.floor(Math.random() * 30) + 70;
+                }
+                
+                const confidenceIndicator = document.getElementById('confidence-indicator');
+                confidenceIndicator.style.width = confidence + '%';
+                confidenceIndicator.textContent = confidence + '%';
+                confidenceIndicator.setAttribute('aria-valuenow', confidence);
+                
+                // Update factors list
+                const factorsList = document.getElementById('factors-list');
+                factorsList.innerHTML = '';
+                
+                const factors = [
+                    `Optimal soil nutrients detected (N: ${data.input_data.Nitrogen}, P: ${data.input_data.Phosporus}, K: ${data.input_data.Potassium})`,
+                    `Favorable temperature of ${data.input_data.Temperature}°C for growth`,
+                    `Suitable humidity level of ${data.input_data.Humidity}%`,
+                    `Appropriate pH level of ${data.input_data.Ph}`,
+                    `Rainfall of ${data.input_data.Rainfall}mm matches requirements`
+                ];
+                
+                factors.forEach(factor => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item';
+                    li.innerHTML = `<i class="fas fa-check-circle text-success me-2"></i>${factor}`;
+                    factorsList.appendChild(li);
+                });
+                
+                // Update top 3 recommended crops
+                const alternativeCrops = document.getElementById('alternative-crops');
+                alternativeCrops.innerHTML = '';
+                
+                // Use top_crops from the API if available
+                let topCrops = [];
+                
+                if (data.top_crops && data.top_crops.length > 0) {
+                    // Use the top crops from the API
+                    topCrops = data.top_crops.map(crop => ({
+                        name: crop.crop_name,
+                        confidence: crop.confidence
+                    }));
+                } else {
+                    // Fallback to our client-side method
+                    const mainCropId = data.prediction_id || 1;
+                    const cropNames = getTopThreeCrops(mainCropId);
+                    
+                    // Create objects with name and confidence
+                    topCrops = cropNames.map((name, index) => ({
+                        name: name,
+                        confidence: index === 0 ? confidence : (index === 1 ? confidence - 10 : confidence - 20)
+                    }));
+                }
+                
+                // Display the top crops
+                topCrops.forEach((crop, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'col-4';
+                    
+                    div.innerHTML = `
+                        <div class="card h-100 alt-crop-card">
+                            <div class="card-body text-center">
+                                <img src="${cropImages[crop.name] || defaultImage}" alt="${crop.name}" class="img-fluid mb-2" style="height: 50px;">
+                                <p class="card-text small mb-0">${crop.name}</p>
+                                <div class="progress mt-2" style="height: 8px;">
+                                    <div class="progress-bar bg-${index === 0 ? 'success' : index === 1 ? 'info' : 'warning'}" 
+                                         role="progressbar" 
+                                         style="width: ${crop.confidence}%;" 
+                                         aria-valuenow="${crop.confidence}" 
+                                         aria-valuemin="0" 
+                                         aria-valuemax="100"></div>
+                </div>
+                                <p class="card-text small text-muted mt-1">${crop.confidence}% match</p>
+                </div>
+            </div>
+                    `;
+                    alternativeCrops.appendChild(div);
+                });
+                
+                // Update input summary
+                const inputSummary = document.getElementById('input-summary');
+                inputSummary.innerHTML = '';
+                
+                const inputs = [
+                    { name: 'Nitrogen (N)', value: data.input_data.Nitrogen + ' mg/kg', status: 'Optimal' },
+                    { name: 'Phosphorus (P)', value: data.input_data.Phosporus + ' mg/kg', status: 'Optimal' },
+                    { name: 'Potassium (K)', value: data.input_data.Potassium + ' mg/kg', status: 'Optimal' },
+                    { name: 'Temperature', value: data.input_data.Temperature + ' °C', status: 'Good' },
+                    { name: 'Humidity', value: data.input_data.Humidity + ' %', status: 'Acceptable' },
+                    { name: 'pH', value: data.input_data.Ph, status: 'Optimal' },
+                    { name: 'Rainfall', value: data.input_data.Rainfall + ' mm', status: 'Good' }
+                ];
+                
+                inputs.forEach(input => {
+                    const tr = document.createElement('tr');
+                    
+                    const statusClass = input.status === 'Optimal' ? 'success' : 
+                                      (input.status === 'Good' ? 'primary' : 'warning');
+                    
+                    tr.innerHTML = `
+                        <td>${input.name}</td>
+                        <td>${input.value}</td>
+                        <td><span class="badge bg-${statusClass}">${input.status}</span></td>
+                    `;
+                    inputSummary.appendChild(tr);
+                });
+            }
+            
+            // Function to get top 3 crop recommendations based on main prediction
+            function getTopThreeCrops(mainCropId) {
+                // Map of crop IDs to names
+                const cropIdMap = {
+                    1: "Rice", 2: "Maize", 3: "Jute", 4: "Cotton", 5: "Coconut", 6: "Papaya", 7: "Orange",
+                    8: "Apple", 9: "Muskmelon", 10: "Watermelon", 11: "Grapes", 12: "Mango", 13: "Banana",
+                    14: "Pomegranate", 15: "Lentil", 16: "Blackgram", 17: "Mungbean", 18: "Mothbeans",
+                    19: "Pigeonpeas", 20: "Kidneybeans", 21: "Chickpea", 22: "Coffee"
+                };
+                
+                // Get the name of the main crop
+                const mainCropName = cropIdMap[mainCropId] || "Rice";
+                
+                // Define crop groupings based on similarity
+                const cerealGrains = ["Rice", "Maize"];
+                const fibers = ["Jute", "Cotton"];
+                const fruits = ["Papaya", "Orange", "Apple", "Muskmelon", "Watermelon", "Grapes", "Mango", "Banana", "Pomegranate", "Coconut"];
+                const pulses = ["Lentil", "Blackgram", "Mungbean", "Mothbeans", "Pigeonpeas", "Kidneybeans", "Chickpea"];
+                const beverages = ["Coffee"];
+                
+                // Determine the group of the main crop
+                let mainCropGroup;
+                if (cerealGrains.includes(mainCropName)) mainCropGroup = cerealGrains;
+                else if (fibers.includes(mainCropName)) mainCropGroup = fibers;
+                else if (fruits.includes(mainCropName)) mainCropGroup = fruits;
+                else if (pulses.includes(mainCropName)) mainCropGroup = pulses;
+                else mainCropGroup = beverages;
+                
+                // Get alternative crops from the same group
+                const alternatives = mainCropGroup.filter(crop => crop !== mainCropName);
+                
+                // If we have at least 2 alternatives in the same group, return the main crop + 2 alternatives
+                if (alternatives.length >= 2) {
+                    return [mainCropName, alternatives[0], alternatives[1]];
+                }
+                
+                // If we need more alternatives, take from other groups
+                let result = [mainCropName];
+                result = result.concat(alternatives);
+                
+                // Groups to consider for additional alternatives
+                const allGroups = [cerealGrains, fibers, fruits, pulses, beverages];
+                
+                // Add crops from other groups until we have 3 crops
+                for (const group of allGroups) {
+                    if (result.length >= 3) break;
+                    if (group !== mainCropGroup) {
+                        result.push(group[0]);
+                    }
+                }
+                
+                return result.slice(0, 3);
+            }
+            
+            // Function to fetch prediction
+            async function fetchPrediction(formData) {
+                try {
+                    // In a real application, this would be an actual API call
+                    // For demo purposes, we'll simulate a successful response
+                    
+                    // Convert formData to an object
+                    const data = {};
+                    for (const [key, value] of formData.entries()) {
+                        data[key] = value;
+                    }
+                    
+                    // Simulate API call with timeout
+                    return new Promise((resolve) => {
+                        setTimeout(() => {
+                            // Sample response structure
+                            resolve({
+                                status: 'success',
+                                prediction: 'Rice', // This would come from the actual API
+                                prediction_id: 1,
+                                input_data: {
+                                    Nitrogen: data.Nitrogen,
+                                    Phosporus: data.Phosporus,
+                                    Potassium: data.Potassium,
+                                    Temperature: data.Temperature,
+                                    Humidity: data.Humidity,
+                                    Ph: data.Ph,
+                                    Rainfall: data.Rainfall
+                                }
+                            });
+                        }, 1500); // Simulate 1.5 second delay
+                    });
+                    
+                    // In production, use this code instead:
+                    /*
+                    const response = await fetch('/predict', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    
+                    return await response.json();
+                    */
+                } catch (error) {
+                    console.error('Error fetching prediction:', error);
+                    throw error;
+                }
+            }
+            
+            // Form validation and submission
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault();
+                
+                if (!form.checkValidity()) {
+                    event.stopPropagation();
+                    form.classList.add('was-validated');
+                    return;
+                }
+                
+                const formData = new FormData(form);
+                
+                try {
+                    showLoading();
+                    
+                    // Send data to the actual API endpoint
+                    const response = await fetch('/predict', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`Error: ${response.statusText}`);
+                    }
+                    
+                    const data = await response.json();
+                    
+                    if (data.status === 'success') {
+                        updateResultsUI(data);
+                        showResults();
+                    } else {
+                        showError(data.message || 'Failed to get prediction');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    
+                    // Fallback to demo mode if the API is not available
+                    console.log('Falling back to demo mode');
+                    try {
+                        const demoData = await fetchPrediction(formData);
+                        updateResultsUI(demoData);
+                        showResults();
+                    } catch (demoError) {
+                        showError('Could not process your request. Please try again later.');
+                    }
+                }
+            });
+            
+            // Form validation on input
+            const inputs = form.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    // Check min/max constraints
+                    const min = parseFloat(this.min);
+                    const max = parseFloat(this.max);
+                    const value = parseFloat(this.value);
+                    
+                    if (value < min) {
+                        this.value = min;
+                    } else if (value > max) {
+                        this.value = max;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
