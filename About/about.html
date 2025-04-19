@@ -6,37 +6,41 @@
     <title>AgriConnect Data System - About Us</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/aboutStyle.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">AgriConnect</a>
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="../home/index.html">
+                <img src="../home/assets/images/Logo.png" alt="AgriConnect Logo" height="150" class="me-1">
+                <span class="display-5 mb-0">AgriConnect</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="../home/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="resource.html">Resources</a>
+                        <a class="nav-link" href="../home/resource.html">Resources</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="recommendation.html">Recommendations</a>
+                        <a class="nav-link" href="../Recommendation/recommendation.html">Crop Recommendation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="fertilizers.html">Fertilizers</a>
+                        <a class="nav-link" href="../home/fertilizers.html">Fertilizers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="irrigation.html">Irrigation</a>
+                        <a class="nav-link" href="../home/irrigation.html">Irrigation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="equipment.html">Equipment</a>
+                        <a class="nav-link" href="../home/equipment.html">Equipment</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="about.html">About</a>
@@ -46,167 +50,134 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="bg-dark text-white text-center py-5">
+    <!-- Hero Section -->
+    <header class="hero-section text-white text-center">
         <div class="container">
-            <h1 class="display-4">About AgriConnect</h1>
-            <p class="lead">Empowering farmers with data-driven agricultural solutions</p>
+            <h1 class="display-4 fw-bold">🧑‍🌾 About Us – AgriConnect Data System</h1>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="container my-5">
         <div class="row">
-            <div class="col-lg-8">
-                <h2>Our Mission</h2>
-                <p class="mb-4">AgriConnect is dedicated to revolutionizing agriculture through innovative data systems and smart farming solutions. We provide farmers with the tools and information they need to optimize their operations, increase productivity, and practice sustainable agriculture.</p>
+            <div class="col-12 animate-fade-in">
+                <section class="about-card mb-5">
+                    <h2 class="section-title mb-4">🌾 Our Mission</h2>
+                    <p class="about-text">Agriculture remains the lifeline of many nations, yet numerous farmers continue to face challenges like outdated techniques, limited access to reliable information, and inefficient resource utilization.</p>
+                    
+                    <p class="about-text">At AgriConnect, our mission is to bridge this gap by bringing together the power of technology, data, and community knowledge to create a modern, user-friendly agricultural support system. We envision a future where farmers are empowered to make smart, data-driven decisions that lead to better yields, improved resource efficiency, and long-term sustainability.</p>
+                    
+                    <h2 class="section-title mb-4 mt-5">🌱 Who We Are</h2>
+                    <p class="about-text">We are a group of dedicated and innovative engineering students passionate about leveraging technology to empower the agricultural sector. With a shared vision of supporting farmers and transforming agriculture, we developed the AgriConnect Data System—a dynamic digital platform aimed at connecting farmers with centralized, reliable, and actionable agricultural data.</p>
+                    
+                    <p class="about-text">Our goal is to simplify access to essential information and intelligent tools that help farmers improve productivity, make informed decisions, and adopt sustainable practices in a rapidly evolving world.</p>
+                </section>
                 
-                <div class="card mb-4">
-                    <div class="card-header">Our Story</div>
-                    <div class="card-body">
-                        <h5 class="card-title">From Farm to Tech</h5>
-                        <p class="card-text">AgriConnect was founded by a team of agricultural experts and technology innovators with a shared vision: to bridge the gap between traditional farming practices and cutting-edge technology.</p>
-                        <p class="card-text">Our journey began in 2018 when we recognized that farmers were collecting vast amounts of data but lacked the tools to transform that data into actionable insights. We set out to develop a comprehensive data system that would enable farmers to make informed decisions about their crops, resources, and equipment.</p>
-                        <p class="card-text">Today, AgriConnect serves farmers across the country, helping them implement data-driven strategies that boost yields, conserve resources, and enhance sustainability.</p>
+                <section class="values-section py-5 animate-fade-in">
+                    <h2 class="section-title text-center mb-5">🔑 Our Core Values</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="value-card h-100">
+                                <div class="card-icon mb-4">
+                                    <i class="fas fa-lightbulb fa-3x"></i>
+                                </div>
+                                <h3 class="value-title">🌟 Innovation</h3>
+                                <p class="value-text">We harness modern technologies—such as machine learning and smart web systems—to bring forward-thinking solutions that reshape conventional farming.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="value-card h-100">
+                                <div class="card-icon mb-4">
+                                    <i class="fas fa-leaf fa-3x"></i>
+                                </div>
+                                <h3 class="value-title">🌿 Sustainability</h3>
+                                <p class="value-text">Our platform encourages environment-friendly methods by promoting practices that preserve natural resources and ensure long-term agricultural health.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="value-card h-100">
+                                <div class="card-icon mb-4">
+                                    <i class="fas fa-users fa-3x"></i>
+                                </div>
+                                <h3 class="value-title">🤝 Community</h3>
+                                <p class="value-text">We aim to build a strong network of farmers, agricultural experts, and technologists who collaborate, learn, and grow together through shared knowledge, blogs, webinars, and resources.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="value-card h-100">
+                                <div class="card-icon mb-4">
+                                    <i class="fas fa-hand-holding-heart fa-3x"></i>
+                                </div>
+                                <h3 class="value-title">💪 Empowerment</h3>
+                                <p class="value-text">AgriConnect is designed to give farmers control over their decisions by equipping them with accurate data, crop recommendations, and timely insights tailored to their needs.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
                 
-                <div class="card mb-4">
-                    <div class="card-header">Our Values</div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Innovation</h5>
-                                        <p class="card-text">We continuously explore new technologies and methodologies to improve agricultural practices.</p>
+                <section class="team-section py-5 animate-fade-in">
+                    <h2 class="section-title text-center mb-5">👥 Meet Our Team</h2>
+                    <div class="row g-5 justify-content-center">
+                        <div class="col-md-4">
+                            <div class="team-card text-center">
+                                <div class="team-avatar mb-4">
+                                    <div class="avatar-circle">
+                                        <span>KG</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Sustainability</h5>
-                                        <p class="card-text">We promote farming practices that protect natural resources and ensure long-term viability.</p>
-                                    </div>
+                                <h3 class="team-name">Gunjal Krishnakant Shivaji</h3>
+                                <p class="team-role">Developer</p>
+                                <div class="social-links mt-3">
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/krishnakantgunjal" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Farmer-Centric</h5>
-                                        <p class="card-text">We design all our solutions with the needs and experiences of farmers at the forefront.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-card text-center">
+                                <div class="team-avatar mb-4">
+                                    <div class="avatar-circle">
+                                        <span>VD</span>
                                     </div>
                                 </div>
+                                <h3 class="team-name">Deokar Vedant Rajendra</h3>
+                                <p class="team-role">Developer</p>
+                                <div class="social-links mt-3">
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                                </div>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Collaboration</h5>
-                                        <p class="card-text">We believe in working together with farmers, researchers, and industry partners to achieve common goals.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-card text-center">
+                                <div class="team-avatar mb-4">
+                                    <div class="avatar-circle">
+                                        <span>PD</span>
                                     </div>
+                                </div>
+                                <h3 class="team-name">Deshmukh Pruthviraj Pramodrao</h3>
+                                <p class="team-role">Developer</p>
+                                <div class="social-links mt-3">
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 
-                <div class="card">
-                    <div class="card-header">Our Team</div>
-                    <div class="card-body">
-                        <h5 class="card-title">The Experts Behind AgriConnect</h5>
-                        <p class="card-text">Our team brings together expertise in agriculture, data science, software development, and farm management.</p>
-                        
-                        <div class="row mt-4">
-                            <div class="col-md-4 text-center mb-4">
-                                <div class="rounded-circle bg-secondary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 100px; height: 100px;">
-                                    <span class="fs-4">JD</span>
-                                </div>
-                                <h5>John Doe</h5>
-                                <p class="text-muted">Founder & CEO</p>
-                            </div>
-                            <div class="col-md-4 text-center mb-4">
-                                <div class="rounded-circle bg-secondary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 100px; height: 100px;">
-                                    <span class="fs-4">JS</span>
-                                </div>
-                                <h5>Jane Smith</h5>
-                                <p class="text-muted">Agricultural Scientist</p>
-                            </div>
-                            <div class="col-md-4 text-center mb-4">
-                                <div class="rounded-circle bg-secondary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 100px; height: 100px;">
-                                    <span class="fs-4">RJ</span>
-                                </div>
-                                <h5>Robert Johnson</h5>
-                                <p class="text-muted">Chief Technology Officer</p>
+                <section class="feedback-section py-5 animate-fade-in">
+                    <h2 class="section-title text-center mb-5">📝 Share Your Feedback</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="feedback-card text-center p-4">
+                                <p class="mb-4">We value your opinion! Please take a moment to share your thoughts with us.</p>
+                                <a href="https://forms.gle/e2y5rqFZX6X9QJWWA" target="_blank" class="btn btn-primary btn-lg feedback-btn">Fill Out Our Feedback Form</a>
+                                <p class="mt-3 small text-muted">Your feedback helps us improve and better serve the farming community.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4">
-                <div class="card mb-4">
-                    <div class="card-header">Contact Us</div>
-                    <div class="card-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                            </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <select class="form-select" id="subject">
-                                    <option selected>Select a subject</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="support">Technical Support</option>
-                                    <option value="partnership">Partnership Opportunity</option>
-                                    <option value="feedback">Feedback</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-dark w-100">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="card mb-4">
-                    <div class="card-header">Our Location</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Visit Us</h5>
-                        <p class="card-text">
-                            <strong>AgriConnect Headquarters</strong><br>
-                            123 Farm Tech Drive<br>
-                            Agriville, AG 12345<br>
-                            United States
-                        </p>
-                        <div class="ratio ratio-16x9">
-                            <div class="bg-secondary d-flex align-items-center justify-content-center text-white">
-                                <p>Map Placeholder</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">Connect With Us</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Follow Our Journey</h5>
-                        <p class="card-text">Stay updated with the latest agricultural insights and AgriConnect news.</p>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-dark">Facebook</a>
-                            <a href="#" class="btn btn-outline-dark">Twitter</a>
-                            <a href="#" class="btn btn-outline-dark">LinkedIn</a>
-                            <a href="#" class="btn btn-outline-dark">Instagram</a>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
         </div>
     </main>
@@ -214,13 +185,9 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h5>AgriConnect Data System</h5>
-                    <p>Your partner in smart farming solutions</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>&copy; 2023 AgriConnect. All rights reserved.</p>
+                    <h5 class="mb-3">AgriConnect Data System</h5>
                 </div>
             </div>
         </div>
@@ -228,7 +195,7 @@
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="js/script.js"></script>
+    <!-- Custom JS -->
+    <script src="js/about.js"></script>
 </body>
 </html> 
