@@ -1,0 +1,305 @@
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../asset/images/sprinkler-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.3), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-section p {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Advantage Cards */
+.advantage-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    height: 100%;
+    background: #f8f9fa;
+    overflow: hidden;
+    position: relative;
+}
+
+.advantage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-card:hover::before {
+    opacity: 1;
+}
+
+.advantage-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.advantage-card:hover .advantage-icon {
+    transform: scale(1.1);
+}
+
+/* Component Section */
+.component-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    margin: 50px 0;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.component-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+.component-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Implementation Steps */
+.implementation-steps {
+    counter-reset: step-counter;
+}
+
+.implementation-steps .step {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.implementation-steps .step:hover {
+    transform: translateX(10px);
+}
+
+.implementation-steps .step::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #007bff, #00bfff);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Maintenance Tips */
+.maintenance-tips {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f3ff 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.maintenance-tips h4 {
+    color: #007bff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.maintenance-tips h4::before {
+    content: '🔧';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.maintenance-tips ul {
+    padding-left: 20px;
+}
+
+.maintenance-tips li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.maintenance-tips li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+/* Crop Recommendations */
+.crop-recommendations {
+    margin: 50px 0;
+}
+
+.crop-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+.crop-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.crop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.crop-card:hover::after {
+    opacity: 1;
+}
+
+.crop-card img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.crop-card:hover img {
+    transform: scale(1.1);
+}
+
+.crop-card .card-body {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.crop-card .card-title {
+    color: #007bff;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.crop-card:hover .card-title {
+    color: #0056b3;
+}
+
+.crop-card .badge {
+    background: linear-gradient(45deg, #007bff, #00bfff);
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.crop-card:hover .badge {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .advantage-card {
+        margin-bottom: 20px;
+    }
+
+    .implementation-steps .step {
+        padding-left: 50px;
+    }
+
+    .crop-card {
+        margin-bottom: 20px;
+    }
+
+    .maintenance-tips {
+        padding: 20px;
+    }
+} 

@@ -1,0 +1,140 @@
+* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../asset/images/furrow-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 50px;
+}
+
+/* Advantage Cards */
+.advantage-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    background: #f8f9fa;
+}
+
+.advantage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* Component Section */
+.component-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    margin: 50px 0;
+}
+
+/* Implementation Steps */
+.implementation-steps {
+    counter-reset: step-counter;
+}
+
+.implementation-steps .step {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 30px;
+}
+
+.implementation-steps .step::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Maintenance Tips */
+.maintenance-tips {
+    background-color: #f0f7ff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.maintenance-tips h4 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.maintenance-tips ul {
+    padding-left: 20px;
+}
+
+.maintenance-tips li {
+    margin-bottom: 10px;
+}
+
+/* Crop Recommendations */
+.crop-recommendations {
+    margin: 50px 0;
+}
+
+.crop-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.crop-card:hover {
+    transform: translateY(-5px);
+}
+
+.crop-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.crop-card .card-body {
+    padding: 20px;
+}
+
+.crop-card .card-title {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.crop-card .badge {
+    background-color: #007bff;
+    margin-right: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .advantage-card {
+        margin-bottom: 20px;
+    }
+
+    .implementation-steps .step {
+        padding-left: 50px;
+    }
+
+    .crop-card {
+        margin-bottom: 20px;
+    }
+}

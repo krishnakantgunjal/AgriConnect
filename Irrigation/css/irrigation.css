@@ -1,0 +1,1050 @@
+/* Navbar Styles */
+:root {
+    --primary-orange: #ffa534;
+    --primary-blue: #0077ff;
+    --soft-beige: #fff8f0;
+    --dark-gray: #333333;
+    --medium-gray: #666666;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--white) !important;
+    padding: 0.5rem 0;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,165,52,0.05) 0%, rgba(255,140,0,0.05) 100%);
+    animation: pulse 3s infinite;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-right: 0;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.navbar-brand img {
+    height: 150px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    animation: float 4s ease-in-out infinite;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05) rotate(5deg);
+    animation: none;
+}
+
+.navbar-brand span {
+    color: var(--primary-blue);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-left: -0.75rem;
+    line-height: 1;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover span {
+    color: var(--primary-orange);
+    transform: translateX(5px);
+}
+
+.nav-link {
+    color: var(--dark-gray) !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    transition: all 0.3s ease;
+    animation: fadeInRight 1s ease-out;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-orange);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::before {
+    width: 80%;
+}
+
+.nav-link.active::before {
+    width: 80%;
+}
+
+.navbar-toggler {
+    animation: fadeInRight 1s ease-out;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar-brand {
+        gap: 0.15rem;
+    }
+    
+    .navbar-brand img {
+        height: 120px;
+        animation: none;
+    }
+    
+    .navbar-brand span {
+        font-size: 2.2rem;
+        margin-left: -0.5rem;
+    }
+    
+    .nav-link {
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    .navbar-toggler {
+        animation: fadeInUp 1s ease-out;
+    }
+}
+
+/* Irrigation Page Styles */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header.bg-info {
+    background: linear-gradient(135deg, #17a2b8 0%, #0d6efd 100%) !important;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+header.bg-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+header h1 {
+    animation: fadeInUp 1s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #17a2b8 0%, #0d6efd 100%);
+    color: white;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border: none;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Irrigation Method Cards */
+.irrigation-method-card {
+    height: 100%;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.irrigation-method-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.irrigation-method-card .card-body {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,1) 100%);
+    transition: all 0.4s ease;
+}
+
+.irrigation-method-card:hover .card-body {
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    transform: translateY(-10px);
+}
+
+.irrigation-method-card h6 {
+    color: var(--primary-blue);
+    transition: all 0.4s ease;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.irrigation-method-card:hover h6 {
+    color: var(--primary-orange);
+    transform: translateX(8px);
+}
+
+.irrigation-method-card p {
+    transition: all 0.4s ease;
+    opacity: 0.9;
+}
+
+.irrigation-method-card:hover p {
+    opacity: 1;
+    transform: translateX(8px);
+}
+
+.irrigation-method-card .efficiency {
+    font-weight: 600;
+    color: #28a745;
+    margin-top: 1rem;
+    transition: all 0.4s ease;
+}
+
+.irrigation-method-card:hover .efficiency {
+    transform: translateX(8px);
+}
+
+/* Enhanced Gallery Styles */
+.irrigation-gallery {
+    padding: 2rem 0;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    background: #fff;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    padding: 1.5rem;
+    background: #fff;
+}
+
+.gallery-caption h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.gallery-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.gallery-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.gallery-details strong {
+    color: var(--primary-color);
+}
+
+/* Comparison Table Styles */
+.table-responsive {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(13, 202, 240, 0.05);
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.table td a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.table td a:hover {
+    color: var(--secondary-color);
+}
+
+/* Calculator Form */
+.calculator-form {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.calculator-form .form-label {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.calculator-form .form-control,
+.calculator-form .form-select {
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+
+.calculator-form .form-control:focus,
+.calculator-form .form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.calculator-form .btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.calculator-form .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tips List */
+.tips-list .list-group-item {
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.tips-list .list-group-item:hover {
+    transform: translateX(10px);
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Consultation Card */
+.consultation-card {
+    background: linear-gradient(135deg, #17a2b8 0%, #0d6efd 100%);
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.consultation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.consultation-card .card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.consultation-card .btn-outline-info {
+    color: white;
+    border-color: white;
+}
+
+.consultation-card .btn-outline-info:hover {
+    background-color: white;
+    color: var(--primary-blue);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: 3rem 0;
+}
+
+.social-links a {
+    color: var(--white) !important;
+    transition: var(--transition);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: var(--primary-orange) !important;
+    transform: translateY(-3px);
+}
+
+/* Additional Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header.bg-info {
+        padding: 3rem 0;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    .gallery-caption {
+        padding: 1rem;
+    }
+    
+    .table thead th,
+    .table td {
+        padding: 0.75rem;
+    }
+    
+    .calculator-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Drip Irrigation Page Styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../asset/images/drip-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(13, 202, 240, 0.3) 0%, rgba(0, 0, 0, 0.6) 70%);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-section p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.3s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Advantage Cards */
+.advantage-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    background: #f8f9fa;
+    overflow: hidden;
+    position: relative;
+}
+
+.advantage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.advantage-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.advantage-card:hover::before {
+    transform: scaleX(1);
+}
+
+.advantage-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.advantage-card:hover .advantage-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.advantage-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.advantage-card:hover .card-title {
+    color: var(--secondary-color);
+}
+
+/* Component Section */
+.component-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    margin: 60px 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.component-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(13, 202, 240, 0.1) 0%, rgba(13, 202, 240, 0) 70%);
+    border-radius: 50%;
+}
+
+.component-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(13, 202, 240, 0.1) 0%, rgba(13, 202, 240, 0) 70%);
+    border-radius: 50%;
+}
+
+.component-section .list-group-item {
+    border: none;
+    background: transparent;
+    padding: 1.2rem 1rem;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.component-section .list-group-item:hover {
+    background-color: rgba(13, 202, 240, 0.05);
+    transform: translateX(10px);
+}
+
+.component-section .list-group-item i {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(13, 202, 240, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.component-section .list-group-item:hover i {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Implementation Steps */
+.implementation-steps {
+    counter-reset: step-counter;
+    position: relative;
+}
+
+.implementation-steps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    z-index: 0;
+}
+
+.implementation-steps .step {
+    position: relative;
+    padding-left: 70px;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+.implementation-steps .step::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(13, 202, 240, 0.3);
+    transition: all 0.3s ease;
+}
+
+.implementation-steps .step:hover::before {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(13, 202, 240, 0.4);
+}
+
+.implementation-steps .step h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.implementation-steps .step:hover h4 {
+    color: var(--secondary-color);
+}
+
+/* Comparison Table */
+.comparison-table {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.comparison-table th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    border: none;
+}
+
+.comparison-table td {
+    padding: 1rem;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+}
+
+.comparison-table tr:hover td {
+    background-color: rgba(13, 202, 240, 0.05);
+}
+
+.comparison-table tr:first-child td {
+    background-color: rgba(13, 202, 240, 0.1);
+    font-weight: 600;
+}
+
+/* Maintenance Tips */
+.maintenance-tips {
+    background: linear-gradient(135deg, #e9f7fe, #d1f0fa);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(13, 202, 240, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.maintenance-tips::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: url('../asset/images/water-drop.png') no-repeat center/contain;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+.maintenance-tips h4 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.maintenance-tips h4::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.maintenance-tips ul {
+    padding-left: 20px;
+}
+
+.maintenance-tips li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.maintenance-tips li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Crop Recommendations */
+.crop-recommendations {
+    margin: 60px 0;
+}
+
+.crop-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    position: relative;
+}
+
+.crop-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    transition: height 0.4s ease;
+}
+
+.crop-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.crop-card:hover::after {
+    height: 100%;
+}
+
+.crop-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.crop-card:hover img {
+    transform: scale(1.1);
+}
+
+.crop-card .card-body {
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.crop-card .card-title {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.crop-card:hover .card-title {
+    color: var(--secondary-color);
+}
+
+.crop-card .badge {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    margin-right: 8px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.crop-card:hover .badge {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(13, 202, 240, 0.2);
+}
+
+/* Call to Action */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 20px;
+    padding: 60px 0;
+    margin: 60px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../asset/images/pattern.png') repeat;
+    opacity: 0.1;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section .btn {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #f8f9fa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+    
+    .advantage-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .implementation-steps::before {
+        left: 15px;
+    }
+    
+    .implementation-steps .step {
+        padding-left: 50px;
+    }
+    
+    .maintenance-tips {
+        padding: 30px;
+    }
+    
+    .crop-card img {
+        height: 200px;
+    }
+    
+    .cta-section {
+        padding: 40px 0;
+    }
+}
