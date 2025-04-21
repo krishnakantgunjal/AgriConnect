@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect Data System - Irrigation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/irrigation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="asset/images/Logo.png" alt="AgriConnect Logo" height="150" class="me-1">
+                <span class="display-5 mb-0">AgriConnect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resource.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Recommendation.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Fertilizer.html">Fertilizers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="irrigation.html">Irrigation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Equipment.html">Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-info text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Irrigation Management</h1>
+            <p class="lead">Efficient water usage for sustainable farming</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="mb-4">Smart Irrigation Solutions</h2>
+                <p class="lead mb-4">Effective irrigation is crucial for crop health and water conservation. Our irrigation management system helps you optimize water usage based on crop needs, soil conditions, and weather forecasts.</p>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Irrigation Systems</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Types of Irrigation Systems</h5>
+                        <p class="card-text">Explore different irrigation methods and their specific applications for various farming scenarios.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 irrigation-method-card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Drip Irrigation</h6>
+                                        <p class="card-text">Water-efficient system that delivers water directly to plant roots, minimizing waste.</p>
+                                        <p class="efficiency"><strong>Efficiency: </strong>90-95%</p>
+                                        <a href="drip-irrigation.html" class="btn btn-sm btn-outline-primary mt-2">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 irrigation-method-card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Sprinkler Irrigation</h6>
+                                        <p class="card-text">Simulates rainfall by spraying water over crops through a network of pipes.</p>
+                                        <p class="efficiency"><strong>Efficiency: </strong>75-85%</p>
+                                        <a href="sprinkler-irrigation.html" class="btn btn-sm btn-outline-primary mt-2">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 irrigation-method-card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Furrow Irrigation</h6>
+                                        <p class="card-text">Traditional method where water flows through small trenches between crop rows.</p>
+                                        <p class="efficiency"><strong>Efficiency: </strong>60-70%</p>
+                                        <a href="furrow-irrigation.html" class="btn btn-sm btn-outline-primary mt-2">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">Smart Irrigation Technology</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Modern Irrigation Solutions</h5>
+                        <p class="card-text">Discover how IoT devices, sensors, and automation can revolutionize your irrigation practices.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h6>Soil Moisture Sensors</h6>
+                                <p>Monitor actual water needs based on soil conditions</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h6>Weather-Based Controllers</h6>
+                                <p>Adjust irrigation schedules based on weather forecasts</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h6>Remote Monitoring</h6>
+                                <p>Control your irrigation system from anywhere using mobile apps</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h6>Automated Scheduling</h6>
+                                <p>Set up precise watering schedules based on crop needs</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-header">Water Conservation Tips</div>
+                    <ul class="list-group list-group-flush tips-list">
+                        <li class="list-group-item">Water early in the morning to reduce evaporation</li>
+                        <li class="list-group-item">Install rainwater harvesting systems</li>
+                        <li class="list-group-item">Use mulch to retain soil moisture</li>
+                        <li class="list-group-item">Regularly maintain and check for leaks</li>
+                        <li class="list-group-item">Consider drought-resistant crop varieties</li>
+                    </ul>
+                </div>
+                
+                <div class="card consultation-card">
+                    <div class="card-header">Need Help?</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Irrigation Consultation</h5>
+                        <p class="card-text">Our experts can help you design the optimal irrigation system for your farm.</p>
+                        <a href="#" class="btn btn-outline-info">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Expanded Irrigation Gallery -->
+        <div class="irrigation-gallery mt-5">
+            <h2 class="text-center mb-4">Irrigation Methods in Action</h2>
+            <p class="text-center lead mb-5">Explore our comprehensive guide to different irrigation systems and their applications</p>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="asset/images/drip" alt="Drip Irrigation System">
+                        <div class="gallery-caption">
+                            <h5>Drip Irrigation</h5>
+                            <p>Precise water delivery directly to plant roots</p>
+                            <div class="gallery-details">
+                                <p><strong>Best for:</strong> Row crops, orchards, vineyards</p>
+                                <p><strong>Water efficiency:</strong> 90-95%</p>
+                                <p><strong>Initial cost:</strong> High</p>
+                                <a href="drip-irrigation.html" class="btn btn-sm btn-primary mt-2">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="asset/images/sprinkler" alt="Sprinkler Irrigation System">
+                        <div class="gallery-caption">
+                            <h5>Sprinkler Irrigation</h5>
+                            <p>Simulating natural rainfall for uniform coverage</p>
+                            <div class="gallery-details">
+                                <p><strong>Best for:</strong> Field crops, lawns, sports fields</p>
+                                <p><strong>Water efficiency:</strong> 75-85%</p>
+                                <p><strong>Initial cost:</strong> Medium</p>
+                                <a href="sprinkler-irrigation.html" class="btn btn-sm btn-primary mt-2">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item">
+                        <img src="asset/images/furrow" alt="Furrow Irrigation System">
+                        <div class="gallery-caption">
+                            <h5>Furrow Irrigation</h5>
+                            <p>Traditional method using channels between rows</p>
+                            <div class="gallery-details">
+                                <p><strong>Best for:</strong> Row crops, field crops</p>
+                                <p><strong>Water efficiency:</strong> 60-70%</p>
+                                <p><strong>Initial cost:</strong> Low</p>
+                                <a href="furrow-irrigation.html" class="btn btn-sm btn-primary mt-2">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5 class="mb-3">AgriConnect Data System</h5>
+                    <p class="mb-0">Your partner in smart farming solutions</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="mt-3 mb-0">&copy; 2023 AgriConnect. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

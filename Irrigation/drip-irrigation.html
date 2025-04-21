@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drip Irrigation - AgriConnect</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/irrigation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="asset/images/Logo.png" alt="AgriConnect Logo" height="150" class="me-1">
+                <span class="display-5 mb-0">AgriConnect</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resource.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Recommendation.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Fertilizer.html">Fertilizers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="irrigation.html">Irrigation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Equipment.html">Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Drip Irrigation</h1>
+            <p class="lead mb-0">Precise water delivery for optimal crop growth and water conservation</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Introduction -->
+        <section class="mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">What is Drip Irrigation?</h2>
+                    <p class="lead">Drip irrigation is a micro-irrigation system that delivers water directly to the root zone of plants through a network of valves, pipes, tubing, and emitters.</p>
+                    <p>This method minimizes water loss through evaporation, runoff, and deep percolation, making it one of the most efficient irrigation techniques available today. By providing water in small, frequent doses, drip irrigation ensures that plants receive exactly what they need, when they need it.</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <div class="me-4">
+                            <h3 class="text-primary mb-0">90-95%</h3>
+                            <p class="mb-0">Water Efficiency</p>
+                        </div>
+                        <div class="me-4">
+                            <h3 class="text-primary mb-0">40-60%</h3>
+                            <p class="mb-0">Water Savings</p>
+                        </div>
+                        <div>
+                            <h3 class="text-primary mb-0">30-50%</h3>
+                            <p class="mb-0">Yield Increase</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="asset/images/drip-irrigation.jpg" alt="Drip Irrigation System" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages -->
+        <section class="mb-5">
+            <h2 class="text-center mb-5">Advantages of Drip Irrigation</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card advantage-card">
+                        <div class="card-body text-center">
+                            <div class="advantage-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4 class="card-title">Water Conservation</h4>
+                            <p class="card-text">Drip irrigation can reduce water usage by 40-60% compared to traditional methods by delivering water directly to plant roots and minimizing evaporation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card advantage-card">
+                        <div class="card-body text-center">
+                            <div class="advantage-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4 class="card-title">Improved Plant Health</h4>
+                            <p class="card-text">Plants receive consistent moisture levels, reducing stress and promoting healthier root development and overall growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card advantage-card">
+                        <div class="card-body text-center">
+                            <div class="advantage-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h4 class="card-title">Cost Savings</h4>
+                            <p class="card-text">Lower water bills, reduced labor costs, and higher crop yields contribute to significant long-term financial benefits.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card advantage-card">
+                        <div class="card-body text-center">
+                            <div class="advantage-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4 class="card-title">Fertilizer Efficiency</h4>
+                            <p class="card-text">Fertilizers can be applied directly through the drip system (fertigation), ensuring nutrients reach plant roots efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card advantage-card">
+                        <div class="card-body text-center">
+                            <div class="advantage-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h4 class="card-title">Weed Control</h4>
+                            <p class="card-text">By watering only the plant root zone, drip irrigation reduces moisture in row spaces, limiting weed growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card advantage-card">
+                        <div class="card-body text-center">
+                            <div class="advantage-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h4 class="card-title">Versatility</h4>
+                            <p class="card-text">Effective on any terrain, including slopes and irregular shapes, making it suitable for various agricultural settings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components -->
+        <section class="component-section rounded">
+            <div class="container">
+                <h2 class="text-center mb-5">Drip Irrigation Components</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="asset/images/drip-irri-euip.jpg" alt="Drip Irrigation Components" class="img-fluid rounded shadow mb-4">
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-faucet text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Water Source</h5>
+                                    <p class="mb-0">Well, pond, municipal water, or other water supply</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-filter text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Filtration System</h5>
+                                    <p class="mb-0">Removes debris and prevents clogging of emitters</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-tachometer-alt text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Pressure Regulators</h5>
+                                    <p class="mb-0">Maintains optimal pressure throughout the system</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-tube text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Mainline</h5>
+                                    <p class="mb-0">Primary pipe that carries water from source to field</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-stream text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Lateral Lines</h5>
+                                    <p class="mb-0">Smaller tubes that distribute water to plants</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-droplet text-primary me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Emitters</h5>
+                                    <p class="mb-0">Devices that control water flow to individual plants</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Steps -->
+        <section class="mb-5">
+            <h2 class="text-center mb-5">Implementation Guide</h2>
+            <div class="implementation-steps">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="step">
+                            <h4>System Design</h4>
+                            <p>Plan your drip system based on field layout, crop requirements, and water source. Consider factors like field size, crop spacing, and water pressure.</p>
+                        </div>
+                        <div class="step">
+                            <h4>Component Selection</h4>
+                            <p>Choose appropriate components based on your design. Select emitters with flow rates matching your crop's water needs.</p>
+                        </div>
+                        <div class="step">
+                            <h4>Installation</h4>
+                            <p>Install mainlines, sub-mainlines, and lateral lines according to your design. Ensure proper slope and secure all connections.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="step">
+                            <h4>Testing</h4>
+                            <p>Flush the system and check for leaks. Test pressure throughout the system to ensure uniform distribution.</p>
+                        </div>
+                        <div class="step">
+                            <h4>Operation</h4>
+                            <p>Set up a watering schedule based on crop needs, soil type, and weather conditions. Monitor system performance regularly.</p>
+                        </div>
+                        <div class="step">
+                            <h4>Maintenance</h4>
+                            <p>Implement a regular maintenance routine to prevent clogging and ensure long-term system efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Maintenance Tips -->
+        <section class="maintenance-tips">
+            <h4><i class="fas fa-tools me-2"></i> Essential Maintenance Tips</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Regularly inspect and clean filters to prevent clogging</li>
+                        <li>Check for leaks and repair damaged components promptly</li>
+                        <li>Flush the system periodically to remove sediment</li>
+                        <li>Monitor pressure throughout the system</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>Replace worn emitters as needed</li>
+                        <li>Adjust watering schedule based on seasonal changes</li>
+                        <li>Protect components from UV damage and weather</li>
+                        <li>Keep records of maintenance activities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crop Recommendations -->
+        <section class="crop-recommendations">
+            <h2 class="text-center mb-5">Ideal Crops for Drip Irrigation</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card crop-card">
+                        <img src="asset/images/drip-vege.jpg" alt="Vegetables" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Vegetables</h5>
+                            <p class="card-text">Tomatoes, peppers, cucumbers, and other row crops benefit greatly from consistent moisture.</p>
+                            <div class="mt-3">
+                                <span class="badge">High Value</span>
+                                <span class="badge">Sensitive to Water</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card crop-card">
+                        <img src="asset/images/fruit-drip-irrig.jpg" alt="Fruits" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Fruits</h5>
+                            <p class="card-text">Orchards and vineyards achieve optimal growth with precise water delivery to root zones.</p>
+                            <div class="mt-3">
+                                <span class="badge">Perennial</span>
+                                <span class="badge">Deep Roots</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card crop-card">
+                        <img src="asset/images/flower-drip-irrig.jpg" alt="Flowers" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Flowers & Ornamentals</h5>
+                            <p class="card-text">Greenhouse and field-grown flowers thrive with controlled moisture levels.</p>
+                            <div class="mt-3">
+                                <span class="badge">Aesthetic Value</span>
+                                <span class="badge">Sensitive to Overwatering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5 class="mb-3">AgriConnect Data System</h5>
+                    <p class="mb-0">Your partner in smart farming solutions</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="mt-3 mb-0">&copy; 2023 AgriConnect. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
