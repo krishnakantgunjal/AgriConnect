@@ -23,6 +23,10 @@ The system helps farmers make **data-driven decisions** that improve productivit
 
 ---
 
+## 📸Home Page  
+<img src="Home/assets/images/Index.png" alt="AgriConnect Home" width="700"/>  
+
+---
 
 ## 📂 Project Structure  
 ```plaintext
@@ -30,24 +34,6 @@ AgriConnect/
 ├── index.html          # Homepage
 ├── styles.css          # Stylesheet (CSS3)
 ├── script.js           # JavaScript logic
-├── assets/             # Images, icons, and resources
-│   └── images/
-
-
----
-
-
-```markdown
-## 📸 Screenshots  
-
-### 🏠 Home Page  
-<img src="assets/images/Index.png" alt="Home Page" width="700"/>  
-
-### 🌾 Crop Recommendation  
-<img src="assets/images/Crop.png" alt="Crop Recommendation" width="700"/>  
-
-### 🌱 Fertilizer Information  
-<img src="assets/images/Fertilizer.png" alt="Fertilizer Info" width="700"/>  
-
-│       └── Index.png   # Homepage screenshot
+├── Home/
+│   └── assets/images/Index.png   # Homepage screenshot
 └── README.md           # Project documentation
