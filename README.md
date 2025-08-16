@@ -22,7 +22,7 @@ The system helps farmers make **data-driven decisions** that improve productivit
 - **AI/ML (future scope):** Crop recommendation algorithms  
 
 ---
-<img src="AgriConnect/Home/assets/images/Index.png" alt="AgriConnect Home" width="700"/>
+
 
 ## 📂 Project Structure  
 ```plaintext
@@ -31,5 +31,23 @@ AgriConnect/
 ├── styles.css          # Stylesheet (CSS3)
 ├── script.js           # JavaScript logic
 ├── assets/             # Images, icons, and resources
-│   └── screenshot.png  # Project screenshot
+│   └── images/
+
+
+---
+
+
+```markdown
+## 📸 Screenshots  
+
+### 🏠 Home Page  
+<img src="assets/images/Index.png" alt="Home Page" width="700"/>  
+
+### 🌾 Crop Recommendation  
+<img src="assets/images/Crop.png" alt="Crop Recommendation" width="700"/>  
+
+### 🌱 Fertilizer Information  
+<img src="assets/images/Fertilizer.png" alt="Fertilizer Info" width="700"/>  
+
+│       └── Index.png   # Homepage screenshot
 └── README.md           # Project documentation
