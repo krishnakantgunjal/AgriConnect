@@ -22,6 +22,7 @@ The system helps farmers make **data-driven decisions** that improve productivit
 - **AI/ML (future scope):** Crop recommendation algorithms  
 
 ---
+<img src="AgriConnect/Home/assets/images/Index.png" alt="AgriConnect Home" width="700"/>
 
 ## 📂 Project Structure  
 ```plaintext
