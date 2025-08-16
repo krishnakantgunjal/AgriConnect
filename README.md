@@ -17,9 +17,9 @@ The system helps farmers make **data-driven decisions** that improve productivit
 
 ## 🛠️ Tech Stack  
 - **Frontend:** HTML5, CSS3, JavaScript  
-- **Backend (future scope):** Python / Flask / Node.js  
-- **Database (future scope):** MySQL / MongoDB  
-- **AI/ML (future scope):** Crop recommendation algorithms  
+- **Backend :** Python / Flask  
+- **Database :** MySQL  
+- **AI/ML :** Crop recommendation algorithms  
 
 ---
 
