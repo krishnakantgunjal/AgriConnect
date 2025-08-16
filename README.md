@@ -30,10 +30,50 @@ The system helps farmers make **data-driven decisions** that improve productivit
 
 ## 📂 Project Structure  
 ```plaintext
+## 📂 Project Structure  
+```plaintext
 AgriConnect/
-├── index.html          # Homepage
-├── styles.css          # Stylesheet (CSS3)
-├── script.js           # JavaScript logic
-├── Home/
-│   └── assets/images/Index.png   # Homepage screenshot
-└── README.md           # Project documentation
+├── About/                          # About page
+│   ├── about.html
+│   ├── css/
+│   │   └── aboutStyle.css
+│   └── assets/
+│       ├── images/
+│       └── videos/
+│
+├── Equipment/                      # Equipment information pages
+│   ├── equipment.html
+│   ├── css/
+│   │   └── equipmentstyle.css
+│   └── assets/
+│       └── images/
+│
+├── Fertilizers/                    # Fertilizer information pages
+│   ├── fertilizers.html
+│   ├── css/
+│   └── assets/
+│       └── images/
+│
+├── Home/                           # Homepage
+│   ├── index.html
+│   ├── css/
+│   │   └── homestyle.css
+│   └── assets/
+│       └── images/
+│           └── Index.png           
+│
+├── Irrigation/                     # Irrigation methods
+│   ├── irrigation.html
+│   ├── drip-irrigation.html
+│   ├── sprinkler-irrigation.html
+│   ├── surface-irrigation.html
+│   ├── micro-irrigation.html
+│   ├── furrow-irrigation.html
+│   ├── center-pivot-irrigation.html
+│   └── assets/
+│       └── images/
+│
+├── .vscode/                        
+│
+└── README.md                       # Project documentation
+
